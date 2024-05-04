@@ -55,6 +55,11 @@ public class GameArena {
     }
 
     private void playRound(Player A, Player B, PlayerNum currentPlayer) {
+        ///////////////////////////
+        System.out.println("*********************************************************");
+        System.out.println("*                   STARTING NEW ROUND                  *");
+        System.out.println("*********************************************************");
+        //////////////////////////
         if (currentPlayer == PlayerNum.PLAYER_A) {
             System.out.println("Player " + A.name + " is attacking and Player " + B.name + " is defending.");
             System.out.println("Player " + A.name + " is rolling dice...");
