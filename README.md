@@ -16,9 +16,10 @@ And so on
 
 ## Steps for code execution
 1. Unzip/clone the Swiggy_LLD repository. The project directory name containing all project files (Main.java, readme.md, interfaces, game, gameTypes, utils) must be Swiggy_LLD.
-2. Java version used 17.0.10
-3. Compile or build the program files: (I used Visual Studio code to run the program.)
+   For example: if the unzip directory name is Swiggy_LLD-main, change that to Swiggy_LLD
+3. Java version used 17.0.10
+4. Compile or build the program files: (I used Visual Studio code to run the program.)
    ```bash
    Compile and run Main.java
    ```
-4. After executing Main.java, input the players attributes. After then the game starts.
+5. After executing Main.java, input the players attributes. After then the game starts.
