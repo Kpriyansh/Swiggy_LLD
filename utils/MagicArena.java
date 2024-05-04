@@ -10,6 +10,27 @@ public class MagicArena extends TwoPlayerGame {
 
     public void startGame() {
         try {
+            //////////////////////////
+            System.out.println("*********************************************************");
+            System.out.println("*                 WELCOME TO MAGIC ARENA                *");
+            System.out.println("*********************************************************");
+            //////////////////////////
+            System.out.println("###RULES OF THE GAME###");
+            System.out.println("•This is a two player game");
+            System.out.println(
+                    "•Every Player is defined by a 'health' attribute, 'strength' attribute and an 'attack' attribute - all positive integers");
+            System.out.println(
+                    "•The player dies if his health attribute touches 0. Any two player can fight a match in the arena.");
+            System.out.println(
+                    "•Players attack in turns. Attacking player rolls the attacking dice and the defending player rolls the defending dice, dice numbered 1 to 6.");
+            System.out.println(
+                    "•The 'attack' value multiplied by the outcome of the attacking dice roll is the damage created by the attacker. The defender 'strength' value, multiplied by the outcome of the defending dice is the damage defended by the defender.");
+            System.out.println(
+                    "•Whatever damage created by attacker which is in excess of the damage defended by the defender will reduce the 'health' of the defender.");
+            System.out.println("•Game ends when any players health reaches 0.");
+            System.out.println("•Player with lower health attacks first at the start of a match.");
+            //////////////////////////
+
             Player[] players = super.buildArena();
 
             ///////////////////////////
@@ -33,7 +54,7 @@ public class MagicArena extends TwoPlayerGame {
 
             System.out.println("\n#################### WINNER ####################");
             if (winner == PlayerNum.PLAYER_A) {
-                System.out.println("*Player " + A.name + " wins Magic Arena");
+                System.out.println("Player " + A.name + " wins Magic Arena");
             } else {
                 System.out.println("Player " + B.name + " wins Magic Arena");
 
@@ -54,7 +75,7 @@ public class MagicArena extends TwoPlayerGame {
 
         if (currentPlayer == PlayerNum.PLAYER_A) {
             System.out.println("Player " + A.name + " is attacking and Player " + B.name + " is defending.");
-            System.out.println("Player " + A.name + " is rolling dice...");
+            System.out.println("Attacking Player " + A.name + " is rolling dice...");
             // Player A turn
             int score_A = rollMagicArenaDice();
             System.out.println("Dice score: " + score_A);
@@ -62,6 +83,7 @@ public class MagicArena extends TwoPlayerGame {
             System.out.println("Player " + A.name + "'s attack power = " + attackingPower);
 
             // Player B turn
+            System.out.println("Defending Player " + B.name + " is rolling dice...");
             int score_B = rollMagicArenaDice();
             System.out.println("Dice score: " + score_B);
             int defence = score_B * B.strength;
@@ -71,7 +93,7 @@ public class MagicArena extends TwoPlayerGame {
 
         } else {
             System.out.println("Player " + B.name + " is attacking and Player " + A.name + " is defending.");
-            System.out.println("Player " + B.name + " is rolling dice...");
+            System.out.println("Attacking Player " + B.name + " is rolling dice...");
 
             // Player B turn
             int score_B = rollMagicArenaDice();
@@ -80,6 +102,7 @@ public class MagicArena extends TwoPlayerGame {
             System.out.println("Player " + B.name + "'s attack power = " + attackingPower);
 
             // Player A turn
+            System.out.println("Defending Player " + A.name + " is rolling dice...");
             int score_A = rollMagicArenaDice();
             System.out.println("Dice score: " + score_A);
             int defence = score_A * A.strength;
