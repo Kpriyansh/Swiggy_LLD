@@ -25,10 +25,10 @@ And so on
 2. Java version = 17.0.10
 3. Compile or build the program files:
    ```bash
-   javac Main.java
+   javac Swiggy_LLD/Main.java
    ```
 4. Run the program:
    ```bash
-   java Main.java
+   java Swiggy_LLD/Main.java
    ```
 5. The game will start, input the player attributes. After then the game starts.
