@@ -31,4 +31,4 @@ And so on
    ```bash
    java Swiggy_LLD/Main.java
    ```
-5. The game will start, input the player attributes. After then the game starts.
+5. Input the player attributes. After then the game starts.
